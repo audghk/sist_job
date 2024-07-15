@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+		div{font-weight: bold; border: 1px solid #333;
+			border-radius: 10px; padding: 10px; box-shadow: 10px 10px 10px #333;
+			width: 400px; height: 200px; margin-top: 30px;}
+</style>
+<script type="text/javascript">
+	//embed 방식
+	function setText(text){
+		var divNode=document.getElementById("output");
+		if(flag==2){
+			text="<marquee scrollamount='10'>"+text+"</marquee>"
+		}
+	}
+		divNode.innerHTML=text;
+</script>
+</head>
+<body>
+오늘의 요일은? <input type="button" value="확인" class="btn" onclick="setText('금요일',1)"/>
+처음 프로젝트 하시느라 수고하셨습니까?
+	<input type="button" value="넵!" class="btn" onclick="setText('고생하셨습니다. 즐거운 주말되세요.',2)"/>
+	<input type="button" value="아니요!" class="btn" onclick="setText('즐거운 주말',3)"/>
+	<div id="output"></div>
+<div id="output"></div>
+</body>
+</html>

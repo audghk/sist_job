@@ -1,0 +1,5 @@
+package day0202;
+
+public class TabaccoException {
+
+}

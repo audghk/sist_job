@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#wrap{ width: 1250px ;height: 1000px; margin: 0px auto;}
+	#header{height: 200px; position: relative;}
+	#main{height: 100px; background: #FFFFFF url(../common/images/daum_serarch.png) no-repeat}
+	#navibar{height: 100px; background: #FFFFFF url(../common/images/daum_navibar.png) no-repeat;}
+	
+	/* container 설정 */
+	#content{height: 1140px; position: relative; }
+	
+	#adMain{width: 810px; height: 100px; position: absolute
+	;left: 0px;top: 10px; background: url(../common/images/ad_main.png) no-repeat;}
+	
+	#loginBox{width: 390px;height: 100px; position: absolute;
+	left: 850px; top: 10px; background: #FFFFFF url(../common/images/login_box.png) no-repeat;
+	float: right;} 
+	
+	#newsMain{width: 830px; height: 570px;position: absolute;
+	left: 0px;top: 150px; background: #FFFFFF url(../common/images/news_main.png)no-repeat;  }
+	
+	#adSub{width: 350px; height: 180px; position: absolute;
+	top: 150px; left: 850px;
+	background: #FFFFFF url(../common/images/ad_sub.png)no-repeat; }
+	
+	#shopping{width: 400px;height: 760px; position: absolute;
+	top: 350px; left: 850px;
+	background: #FFFFFF url(../common/images/showpping.png) no-repeat;}
+	
+	#flashNews{width:820px; height: 260px; position: absolute; top: 750px; left: 0px;
+	background: #FFFFFF url(../common/images/flash_news.png)no-repeat;
+		
+	}
+	#footer{width: 1500px; height: 200px;
+	
+	/* footer의 설정 */
+	background: url(../common/images/footer.png) no-repeat; }
+	
+</style>
+</head>
+<body>
+	<div id ="wrap">
+		<div id="header">
+			<div id ="main"></div>
+			<div id ="navibar"></div>
+		</div>
+		<div id="content">
+			<section>
+			<div id ="adMain"></div>
+			</section>
+			<section>
+			<div id ="loginBox"></div>
+			</section>
+			<section>
+			<div id ="newsMain"></div>
+				<article>
+					<!--뉴스 기사들-->
+				</article>
+			</section>
+			<section>
+			<div id ="adSub"></div>
+			</section>
+			<section>
+			<div id ="shopping"></div>
+			</section>
+			<section>
+			<div id ="flashNews"></div>
+			</section>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

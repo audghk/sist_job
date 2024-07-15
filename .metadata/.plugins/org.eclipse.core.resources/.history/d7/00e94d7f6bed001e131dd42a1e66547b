@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+		div{font-weight: bold; border: 1px solid #333;
+			border-radius: 10px; padding: 10px; box-shadow: 10px 10px 10px #333;
+			width: 400px; height: 200px; margin-top: 30px;}
+</style>
+<script type="text/javascript">
+	//embed 방식
+	function setText(text){
+		var divNode=document.getElementById("output");
+		divNode.innerHTML=text;
+	}
+</script>
+</head>
+<body>
+오늘의 요일은? <input type="button" value="확인" class="btn" onclick=""/>
+<div id="output"></div>
+</body>
+</html>

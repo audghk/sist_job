@@ -1,0 +1,12 @@
+127.0.0.1 - - [23/Jun/2024:16:07:47 +0900] "GET / HTTP/1.1" 500 12557
+0:0:0:0:0:0:0:1 - - [23/Jun/2024:16:07:48 +0900] "GET /mybatis_prj/board/board_list.jsp HTTP/1.1" 200 6469
+192.168.10.216 - - [23/Jun/2024:16:07:48 +0900] "GET /jsp_prj/common/css/board.css HTTP/1.1" 200 79038
+192.168.10.216 - - [23/Jun/2024:16:07:48 +0900] "GET /jsp_prj/common/css/main.css HTTP/1.1" 200 15161
+192.168.10.216 - - [23/Jun/2024:16:07:48 +0900] "GET /jsp_prj/common/images/header.png HTTP/1.1" 200 32209
+192.168.10.216 - - [23/Jun/2024:16:07:48 +0900] "GET /jsp_prj/common/favicon.ico HTTP/1.1" 200 4286
+0:0:0:0:0:0:0:1 - - [23/Jun/2024:16:07:51 +0900] "GET /mybatis_prj/board/board_list.jsp?currentPage=2 HTTP/1.1" 200 5722
+0:0:0:0:0:0:0:1 - - [23/Jun/2024:16:07:53 +0900] "GET /mybatis_prj/board/board_list.jsp?currentPage=3 HTTP/1.1" 200 5706
+0:0:0:0:0:0:0:1 - - [23/Jun/2024:16:08:12 +0900] "GET /mybatis_prj/board/board_read_frm.jsp?seq=78&currentPage=3 HTTP/1.1" 200 8516
+192.168.10.216 - - [23/Jun/2024:16:08:12 +0900] "GET /mybatis_prj/common/css/board.css HTTP/1.1" 200 79038
+192.168.10.216 - - [23/Jun/2024:16:08:12 +0900] "GET /mybatis_prj/common/css/main.css HTTP/1.1" 200 15161
+192.168.10.216 - - [23/Jun/2024:16:08:12 +0900] "GET /mybatis_prj/common/images/header.png HTTP/1.1" 200 32209

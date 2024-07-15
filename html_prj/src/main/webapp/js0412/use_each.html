@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--bootstrap 시작-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--bootstrap 끝-->
+<link rel="stylesheet" href="http://192.168.10.216/html_prj/common/css/main.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://192.168.10.216/html_prj/common/css/board.css" type="text/css" media="all" />
+<!--jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--jQuery CDN 끝-->
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+$(function(){
+	
+	$("#btn").click(function(){
+		var nameArr=["김동섭","정명호","홍성강","이명화","박시현","양수민"];
+		
+		var output="<ul>";
+			$.each(nameArr, function(i,name){
+				output+=`<li>${name}</li>`;
+			});
+			output+="</ul>";	
+			$("#output").html(output);
+	});
+	
+	$("#btn2").click(function(){
+		
+		var output2="<ul>";
+			
+		$("[name='lang']").each(function(i,chkEle){
+			
+			if($(chkEle).is(":checked")){
+				output2+=`<li>${$(chkEle).val()}</li>`;
+			}
+			
+		});//each
+		
+		output2+="</ul>";
+		$("#output2").html(output2);
+		
+	});//click
+	
+});//ready
+</script>
+</head>
+<body>
+<input type="button" value="each" class="btn btn-success btn-sm" id="btn"/>
+<div id="output"></div><hr>
+<div id="output2"></div>
+
+<label>관심언어</label>
+	<input type="checkbox" name="lang" value="Java">Java
+	<input type="checkbox" name="lang" value="C/C++">C/C++
+	<input type="checkbox" name="lang" value="Python">Python
+	<input type="checkbox" name="lang" value="Go">Go
+	<input type="checkbox" name="lang" value="JSP">JSP
+	<br>
+	<input type="button" value="each" class="btn btn-info" id="btn2"/>
+</body>
+</html>

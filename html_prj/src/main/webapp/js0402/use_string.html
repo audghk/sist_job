@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--bootstrap 시작--> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--bootstrap 끝--> 
+<style type="text/css">
+	div{border: 1px solid #333; width: 600px; height: 400px; overflow: auto; margin: 10px; }
+	.btnMargin{margin-left: 10px;}
+</style>
+<script type="text/javascript">
+	function useString() {
+		var msg="AbcdEfg";
+		
+		var output="<ul>";
+			
+		//length는 키워드이므로 ()를 붙이지 않는다.
+		output+=`<li>${msg}의 글자수 ${msg.length}</li>`;
+		//대문자 변환
+		output+=`<li>${msg}의 대문자 : ${msg.toUpperCase()}</li>`;
+		//소문자 변환
+		output+=`<li>${msg}의 소문자 : ${msg.toLowerCase()}</li>`;
+		//문자열에 해당하는 문자열이 존재하는지 : 존재하면 시작 인덱스, 존재하지 않으면 -1
+		output+=`<li>${msg}의 'cdE' 존재여부 : ${msg.indexOf("cdE")}</li>`;
+		//문자열에 해당하는 문자열이 존재하는지 : 존재하면 시작 인덱스, 존재하지 않으면 -1
+		output+=`<li>${msg}의 'k' 존재여부 : ${msg.indexOf("k")}</li>`;
+		
+		msg = 'javascript';
+		output+=`<li>${msg}의 'a' 존재여부 : ${msg.indexOf("a")}</li>`;
+		
+		// substring(시작문자열,끝문자열+1)
+		output+=`<li>${msg}의 4~9번째 사이의 문자열 : ${msg.substring(4,10)}</li>`;
+		// substring(시작문자열)
+		output+=`<li>${msg}의 4번째에서 끝까지의 문자열 : ${msg.substring(4)}</li>`;
+		
+		// charAt(인덱스) : 해당 인덱스의 문자열
+		output+=`<li>${msg}의 2번째 인덱스의 문자열 : ${msg.charAt(2)}</li>`;
+		output+="</ul>";
+		
+		// trim() : 앞뒤 공백 제거
+		msg="   Java script   ";
+		output+=`<li>[${msg}]의 앞뒤 공백 제거 : [${msg.trim()}]</li>`;
+		
+		//replaceAll() : 치환 / replaceAll('찾을 문자열','변경할 문자열')
+		output+=`<li>[${msg}]의 'a'를 찾아서 'k'로 변경 : [${msg.replaceAll("a","k")}]</li>`;
+		
+		//concat() : 문자열을 붙일 때
+		var msg2=msg.concat("ABCDE");
+		output+=`<li>[${msg2}]</li>`;
+		
+		msg="JavaScript";
+		// == : 같은지 비교
+		output+=`<li>${msg}가 "JavaScript"와 같은지 : ${msg=="JavasSript"}</li>`
+		
+		//startWith() : 문자열로 시작하는지? startWith(문자열)
+		output+=`<li>${msg}가 "Ja"로 시작하는지? ${msg.startsWith("Ja")}`;
+		
+		//endWith() : 문자열로 끝나는지? endWith(문자열)
+		output+=`<li>${msg}가 "t"로 끝났는지? ${msg.endsWith("t")}`;
+			
+		msg="java,Oracle,JDBC,HTML,CSS,JavaScript"; //CSV
+		
+		//split() : CSV 데이터를 구분하여 일차원 배열로 얻을 때
+		var subject = msg.split(",");
+		output+=`<li>${subject.length}개</li>`;
+		for(var i=0; i<subject.length; i++) {
+			if(subject[i]=="JDBC") {
+			output+=`<li>${subject[i].toLowerCase()}</li>`;
+			}else {
+			output+=`<li>${subject[i]}</li>`;
+			}
+		}
+		
+		var divNode=document.getElementById("output");
+		divNode.innerHTML=output;
+	}
+</script>
+</head>
+<body>
+<div id="output"></div>
+<input type="button" value="문자열 함수 사용" class="btn btn-info btn-sm btnMargin" onclick="useString()"/>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=java_se/src&lt;day0116{Person.java[Person" modifiers="1" timestamp="1705472353305"/>
+    <typeInfo handle="=java_se/src&lt;day0117{OverrideSuper.java[OverrideSuper" modifiers="1" timestamp="1705476968475"/>
+    <typeInfo handle="=java_se/src&lt;day0118{Fly.java[Fly" modifiers="513" timestamp="1705546058743"/>
+    <typeInfo handle="=java_se/C:\/dev\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1682402758000"/>
+    <typeInfo handle="=java_se/C:\/dev\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1682402758000"/>
+    <typeInfo handle="=jdbc_prj/C:\/dev\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.awt.event(WindowAdapter.class[WindowAdapter" modifiers="1057" timestamp="1682402758000"/>
+    <typeInfo handle="=jdbc_prj/C:\/dev\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;java.awt.event(WindowListener.class[WindowListener" modifiers="1537" timestamp="1682402758000"/>
+    <typeInfo handle="=jdbc_prj/C:\/dev\/eclipse\/plugins\/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.7.v20230425-1502\/jre\/lib\/jrt-fs.jar`java.desktop=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/17\/docs\/api\/=/=/module=/true=/&lt;javax.swing(WindowConstants.class[WindowConstants" modifiers="1537" timestamp="1682402758000"/>
+    <typeInfo handle="=junit_prj/src&lt;kr.co.sist.day0320{TestLotto.java[TestLotto" modifiers="1" timestamp="1710904076206"/>
+</typeInfoHistroy>

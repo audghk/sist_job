@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+</style>
+</head>
+<body>
+	오늘의 요일은? <input type="button" value="보기" class="btn"/>
+</body>
+</html>

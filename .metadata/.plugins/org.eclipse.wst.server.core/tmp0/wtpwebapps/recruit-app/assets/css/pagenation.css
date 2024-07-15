@@ -1,0 +1,30 @@
+#pageNation {
+	font-size: 20px !important;
+	text-align: center !important;
+	height: 160px !important;
+}
+
+.pages {
+	display: inline-block !important;
+	margin: 0 0 0 -1px !important;
+	border: 1px solid #d7d5d5 !important;
+	font-size: 12px !important;
+	color: #757575 !important;
+	vertical-align: top !important;
+}
+
+.pages a {
+	display: block !important;
+	width: 33px !important;
+	padding: 9px 0 !important;
+	font-weight: bold !important;
+	color: #939393 !important;
+	line-height: 14px !important;
+	background: #fff !important;
+}
+
+.this {
+	padding-bottom: 6px !important;
+	border-bottom: 3px solid #495164 !important;
+	color: #495164 !important;
+}

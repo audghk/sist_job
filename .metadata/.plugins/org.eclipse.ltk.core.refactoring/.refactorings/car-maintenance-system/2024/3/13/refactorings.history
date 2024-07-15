@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;kr.co.sist.admin.manage.user.ManageUserInfo&apos; to &apos;ManageUserInfoView&apos;&#x0D;&#x0A;- Original project: &apos;car-maintenance-system&apos;&#x0D;&#x0A;- Original element: &apos;kr.co.sist.admin.manage.user.ManageUserInfo&apos;&#x0D;&#x0A;- Renamed element: &apos;kr.co.sist.admin.manage.user.ManageUserInfoView&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ManageUserInfo&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;kr.co.sist.admin.manage.user{ManageUserInfo.java[ManageUserInfo" matchStrategy="1" name="ManageUserInfoView" qualified="false" references="true" similarDeclarations="false" stamp="1711278072384" textual="false" version="1.0"/>
+</session>

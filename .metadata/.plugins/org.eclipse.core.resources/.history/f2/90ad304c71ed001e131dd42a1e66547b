@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.text{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; width: 80px;}
+	.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+</style>
+<!--외부 JS를 사용할 <script> 태그 정의-->
+<script type="text/javascript" src="external.js"></script>
+<!--개발할 JS코드를 정의할 <script> 태그 정의-->
+<script type="text/javascript"></script>
+</head>
+<body>
+<input type="text" id="num" class="btn">
+</body>
+</html>

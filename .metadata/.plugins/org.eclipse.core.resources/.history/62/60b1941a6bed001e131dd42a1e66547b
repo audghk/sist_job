@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+		.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+</style>
+<script type="text/javascript">
+	//embed 방식
+</script>
+</head>
+<body>
+오늘의 요일은? <input type="button" value="확인" class="btn" onclick=""/>
+<div id="output"></div>
+</body>
+</html>

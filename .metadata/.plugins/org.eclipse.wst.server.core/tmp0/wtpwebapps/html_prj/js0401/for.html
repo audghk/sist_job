@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/*td태그에 넓이 80px, 높이 40px, text가운데 정렬, 글자 진하게, 테두리선 실선으로 설정*/
+	td{width: 80px; height: 20px; text-align: center; font-weight: bold; border: 1px solid #333;}
+	.odd{background-color: #dfdfdf;}
+	.even{background-color: #474747;}
+	td:hover{background-color: chartreuse; font-size: 20px;}
+</style>
+<script type="text/javascript">
+	//<h1~<h6까지 태그 생성하여 출력
+	for(var i=1; i<7; i++){
+		document.write("<h"+i+">안녕하세요?</h"+i+">");
+	}
+	
+	//홀수번호를 가진 행은 바닥색을 #dfdfdf로 짝수번호를 가진 행은 바닥색을 #474747로 설정
+	document.write("<table>");
+	for(let i=1; i<10; i++){
+	document.write("<tr>");
+		//(i%2==0?"even":"odd") => 삼항연산자
+		if(i%2==1){
+		document.write("<td class ="+"odd"+">"+i+"</td>");			
+		}else{
+		document.write("<td class ="+"even"+">"+i+"</td>");		
+		}
+	document.write("</tr>");
+	}
+	document.write("</table>");
+	
+	document.write("<table>");
+	for(let i=2; i<10; i++){
+		document.write("<tr>");
+		for(let j=1; j<10; j++){
+		document.write("<td onclick=\"alert("+i*j+")\">"+i+" x "+j+" </td>");			
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

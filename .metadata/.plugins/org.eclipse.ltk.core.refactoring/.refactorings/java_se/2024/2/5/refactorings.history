@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;day0202.Use&apos; to &apos;UseCompileException&apos;&#x0D;&#x0A;- Original project: &apos;java_se&apos;&#x0D;&#x0A;- Original element: &apos;day0202.Use&apos;&#x0D;&#x0A;- Renamed element: &apos;day0202.UseCompileException&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Use&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;day0202{Use.java[Use" matchStrategy="1" name="UseCompileException" qualified="false" references="true" similarDeclarations="false" stamp="1706844343609" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/*글자 정렬*/
+	table{border:1px solid #333}
+	td{border: 1px solid #333; width: 200px; height: 80px;}
+
+	.left{text-align: left;}
+	.center{text-align: center;}
+	.right{text-align: right;}
+	
+	#top{vertical-align: top;}
+	#middle{vertical-align: middle;}
+	#bottom{vertical-align: bottom;}
+	
+	.topRight{text-align: right; vertical-align: top;}
+	
+	#divAlign{border:1px solid #333; height: 100px;
+	vertical-align: top; text-align: center;}
+</style>
+</head>
+<body>
+<table>
+	<tr>
+		<td class="left">왼쪽</td>
+		<td class="center">가운데</td>
+		<td class="right">오른쪽</td>
+	</tr>
+	<tr>
+		<td id="top">윗쪽</td>
+		<td id="middle">가운데</td>
+		<td id="bottom">아랫쪽</td>
+	</tr>
+	<!--<tr style="text-align: center;">-->
+	<tr>
+		<td>데이터1</td>
+		<td class="topRight">데이터2</td>
+		<td class="topRight">데이터3</td>
+	</tr>
+</table>
+<div id="divAlign">오늘은 화요일 입니다.</div>
+<input type="text" value="연습" id="text"/>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--bootstrap 시작-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--bootstrap 끝-->
+<link rel="stylesheet" href="http://192.168.10.216/html_prj/common/css/main.css" type="text/css" media="all" />
+<link rel="stylesheet" href="http://192.168.10.216/html_prj/common/css/board.css" type="text/css" media="all" />
+<!--jQuery CDN 시작-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!--jQuery CDN 끝-->
+<style type="text/css">
+	div{border: 1px solid #333;}
+	table,th,td{border: 1px solid #333;}
+</style>
+<script type="text/javascript">
+	var cnt=0;
+	$(function(){
+		$("#divAppend").click(function(){
+			var msg=$("#txt").val();
+			cnt++;
+			var output="<div class='subDiv'><input type='text' value='"+cnt+" : "+msg+"'/></div>";
+			
+			$("#div").append(output);
+			
+		});//click
+		
+		$("#divRemove").click(function(){			
+			//$("#div div:last").remove();
+			//$("#div > div").last().remove();//last함수로 삭제
+			//$("#div div:first").remove();
+			//$("#div .subDiv:first").remove();//특정 div 삭제 x
+			$("#div .subDiv:last").remove();
+			
+		});//divremove
+		
+		$("#trAppend").click(function(){
+			var num=$("#num").val();
+			var name=$("#name").val();
+			var age=$("#age").val();
+			
+			var output=`<tr><td>${num}</td><td>${name}</td><td>${age}</td></tr>`;
+			$("#tab > tbody").append(output);
+		});
+		
+		$("#trRemove").click(function(){			
+			//$("#tab").remove();//테이블 자체가 삭제
+			
+			//아이디가 tab인 대상의 tbody 가장 마지막 tr을 삭제
+			$("#tab > tbody > tr:last").remove();
+			
+		});//trremove
+		
+	});//ready
+</script>
+</head>
+<body>
+<label>메시지</label><input type="text" id="txt"/>
+<input type="button" value="div추가" class="btn btn-success btn-sm" id="divAppend"/>
+<input type="button" value="div삭제" class="btn btn-success btn-sm" id="divRemove"/>
+<div id="div">
+	<div>오늘은 비오는 월요일</div>
+</div>
+
+<label>번호</label><input type="text" id="num"/><br>
+<label>이름</label><input type="text" id="name"/><br>
+<label>나이</label><input type="text" id="age"/><br>
+<input type="button" value="tr과 td 추가" class="btn btn-success btn-sm" id="trAppend"/>
+<input type="button" value="tr 삭제" class="btn btn-success btn-sm" id="trRemove"/>
+
+<table id="tab">
+	<thead>
+		<tr>
+			<th style="width: 80px;">번호</th>
+			<th style="width: 150px;">이름</th>
+			<th style="width: 120px;">나이</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.btn{border:1px solid #333; background-color: #fff;
+		font-weight: bold; font-size: 20px; cursor: pointer;}
+</style>
+</head>
+<body>
+	오늘의 요일은? <input type="button" value="보기" class="btn" onclick="alert('금요일 입니다.')"/><br>
+	처음 프로젝트 하시느라 수고하셨습니까?
+	<input type="button" value="넵!" class="btn" onclick="document.getElementById('output').innerHTML='고생하셨습니다. 즐거운 주말되세요.'"/>
+	<input type="button" value="아니요!" class="btn" onclick="alert('금요일 입니다.')"/>
+</body>
+</html>

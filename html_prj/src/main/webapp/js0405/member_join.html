@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!--bootstrap 시작-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+	<!--bootstrap 끝-->
+	<style type="text/css">
+		.space {
+			width: 5px;
+			height: auto;
+			display: inline-block;
+		}
+	</style>
+
+	<link rel="stylesheet" href="https://www.sist.co.kr/css/main.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://www.sist.co.kr/css/board.css" type="text/css" media="all" />
+
+
+	<script type="text/javascript">
+		window.onload = function () {
+			// 1. 이벤트에 등록
+			document.getElementById("idChk").addEventListener("click", idDupWin);
+			document.getElementById("zipcode").addEventListener("click", zipcodeApi);
+			document.getElementById("addChk").addEventListener("click", zipcodeApi);
+		}
+
+		function idDupWin() {
+			// 부모 창에서 자식 창으로 값 전달 : QueryString을 사용하여 전달, 자식 창에서는 JSP 코드로 값을 넘겨 받음
+			var id = document.frm.id.value;
+			// 2. 팝업창 띄운다. window.open("들어갈 페이지 URL", "창 ID", "옵션");
+			window.open("id_dup.jsp?id=" + id, "idDup", "width=472,height=340, top=" + (window.screenY + 100) + ",left=" + (window.screenX + 100));
+		}
+
+	</script>
+
+	<!-- 다음 우편번호 API 시작 -->
+	<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+	<script>
+		function zipcodeApi() {
+			new daum.Postcode({
+				oncomplete: function (data) {
+					var roadAddr = data.roadAddress; // 도로명 주소 변수
+					var extraRoadAddr = ''; // 참고 항목 변수
+
+					if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+						extraRoadAddr += data.bname;
+					}
+					if (data.buildingName !== '' && data.apartment === 'Y') {
+						extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+					}
+					if (extraRoadAddr !== '') {
+						extraRoadAddr = ' (' + extraRoadAddr + ')';
+					}
+
+					document.getElementById('zipcode').value = data.zonecode;
+					document.getElementById("addr0").value = roadAddr;
+					document.getElementById("addr1").focus();
+				}
+			}).open();
+		}
+	</script>
+	<!-- 다음 우편번호 API 끝 -->
+</head>
+
+<body>
+	<!-- //join -->
+	<form action="member_join_process.jsp" name="frm">
+		<div class="writeForm">
+			<table>
+				<colgroup>
+					<col class="writeForm_col01" />
+					<col width="*" />
+				</colgroup>
+				<tr>
+					<th><label for="id">아이디</label></th>
+					<td>
+						<input data-value="아이디를 입력해주세요." name="id" id="id" class="inputTxt inputIdtype" type="text"
+							maxlength="20" />
+						<div class="space"></div>
+						<input type="button" value="ID 중복확인" class="btn btn-outline-dark" id="idChk" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="password">비밀번호</label></th>
+					<td>
+						<input data-value="비밀번호를 입력해주세요." name="password" id="password" class="inputPass size02"
+							type="password" />
+						<span class="password_ch"><label for="password2">비밀번호 확인</label></span>
+						<input data-value="비밀번호를 입력해주세요." name="password2" id="password2"
+							class="inputPass size02 mmarT10" type="password" />
+						<span>*6~12자의 영문, 숫자, 특수문자 3가지를 조합하여 입력</span>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="name">이름</label></th>
+					<td>
+						<input data-value="이름을 입력해주세요." id="name" name="name" class="inputTxt inputName" type="text" />
+					</td>
+				</tr>
+				<tr>
+					<th scope="row"><label for="">생일</label></th>
+					<td>
+						<input type="text" name="birthday" id="birthday" data-value="생년월일을 입력해 주세요." />
+						<span id="CalregistdateIcon">
+
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th>연락처</th>
+					<td>
+
+						<input type="text" name="tel" id="tel" value="" onkeyup="isNumberOrHyphen(this);"
+							onblur="cvtUserPhoneNumber(this)" data-value="" />
+
+
+					</td>
+				</tr>
+				<tr>
+					<th>휴대폰</th>
+					<td>
+
+						<input type="text" name="cell" id="cell" value="" onkeyup="isNumberOrHyphen(this);"
+							onblur="cvtUserPhoneNumber(this)" data-value="휴대폰 번호를 입력해주세요." />
+
+						<span class="label_wrap"><input type="checkbox" id="Num_check" name="issms" value="1" /><label
+								for="Num_check">수신</label></span>
+					</td>
+				</tr>
+
+				<tr>
+					<th><label for="email">이메일</label></th>
+					<td class="mail_type">
+						<input data-value="이메일을 입력해주세요." name="email1" id="email1" class="inputEmail" type="text"
+							maxlength="100" /><span class="email_txt">@</span>
+						<input type="text" list="selecEmail" name="email2" id="email2">
+						<datalist class="selecEmail" name="selecEmail" id="selecEmail" data-value="이메일을 선택해주세요.">
+							<option value="">선택해주세요.</option>
+							<option value='직접 입력'>직접 입력</option>
+							<option value='naver.com'>naver.com</option>
+							<option value='daum.net'>daum.net</option>
+							<option value='gmail.com'>gmail.com</option>
+							<option value='hotmail.com'>hotmail.com</option>
+							<option value='nate.com'>nate.com</option>
+							<option value='korea.com'>korea.com</option>
+						</datalist>
+						<span class="label_wrap"><input type="checkbox" id="Email_check" name="ismail"
+								value="1" /><label for="Email_check">수신</label></span>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="gender">성별</label></th>
+					<td>
+						<input data-value="성별을 선택하세요." name="gender" type="radio" id="radio_check01" value="1" /><label
+							for="radio_check01">남자</label>
+						<input name="gender" type="radio" id="radio_check02" value="2" /><label
+							for="radio_check02">여자</label>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="area">소재지</label></th>
+					<td>
+						<select id="area" name="area">
+							<option value="">선택해주세요.</option>
+							<option value='1'>강원</option>
+							<option value='2'>경기</option>
+							<option value='3'>경남</option>
+							<option value='4'>경북</option>
+							<option value='5'>광주</option>
+							<option value='6'>대구</option>
+							<option value='7'>대전</option>
+							<option value='8'>부산</option>
+							<option value='9'>서울</option>
+							<option value='10'>울산</option>
+							<option value='11'>인천</option>
+							<option value='12'>전남</option>
+							<option value='13'>전북</option>
+							<option value='14'>제주</option>
+							<option value='15'>충남</option>
+							<option value='16'>충북</option>
+							<option value='17'>해외</option>
+						</select>
+						<!-- 						<input  id="area" name="area" class="inputTxt inputName" type="text" /> -->
+					</td>
+				</tr>
+				<tr>
+					<th><label for="zipcode">우편번호</label></th>
+					<td>
+						<input data-value="우편번호를 입력해주세요." type="text" class="zipcode" id="zipcode" name="zipcode"
+							value="" readonly="readonly" />
+						<div class="space"></div>
+						<input type="button" value="우편번호검색" class="btn btn-outline-dark" id="addChk" />
+					</td>
+				</tr>
+				<tr>
+					<th><label for="addr0">주소</label></th>
+					<td class="addr_td">
+						<input data-value="주소를 입력해주세요." type="text" id="addr0" class="addr" name="addr0" value=""
+							readonly="readonly" /><br />
+						<input data-value="상세주소를 입력해주세요." type="text" id="addr1" class="addr" name="addr1" value=""
+							style="margin-top:7px;" />
+					</td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<div class="writeForm_btn">
+		<input type="button" value="확인" class="btn btn-secondary btn-lg" id="submit" />
+		<div class="space"></div>
+		<input type="button" value="취소" class="btn btn-secondary btn-lg" id="cancel" />
+	</div>
+	<input type="hidden" name="email" id="email" value="" />
+	<input type="hidden" name="cmd" id="cmd" value="write" />
+	<!--<input type="hidden" name="spamkey" value="1712214436243"/> -->
+	<input type="hidden" name="spamkey" value="null" />
+	<!-- text/css -->
+</body>
+
+</html>

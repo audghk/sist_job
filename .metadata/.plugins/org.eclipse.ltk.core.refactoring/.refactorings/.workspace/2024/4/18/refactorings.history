@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;jsp_prj/src/main/webapp/day0429/jstl_foreach.jsp&apos;" deleteContents="false" description="Delete resource &apos;jsp_prj/src/main/webapp/day0429/jstl_foreach.jsp&apos;" element1="/jsp_prj/src/main/webapp/day0429/jstl_foreach.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1714367078815"/>
+</session>

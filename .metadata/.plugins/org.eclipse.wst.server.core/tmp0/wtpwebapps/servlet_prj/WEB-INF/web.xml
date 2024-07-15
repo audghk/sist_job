@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+    id="WebApp_ID" version="4.0">
+    <display-name>servlet_prj</display-name>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>default.html</welcome-file>
+        <welcome-file>default.jsp</welcome-file>
+        <welcome-file>default.htm</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>hell</servlet-name>
+        <servlet-class>day0416.Hello</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>hell</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>callTest</servlet-name>
+        <servlet-class>day0417.CallTest</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>callTest</servlet-name>
+        <url-pattern>/call_test</url-pattern>
+    </servlet-mapping>
+</web-app>

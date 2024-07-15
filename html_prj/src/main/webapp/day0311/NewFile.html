@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #container {
+            width: 30%;
+            height: 30%;
+            position: relative;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        #ball {
+            width: 15px;
+            height: 15px;
+            background-color: blue;
+            position: absolute;
+            border-radius: 50%;
+            top: calc(50% - 15px);
+            left: calc(50% - 15px);
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="ball"></div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var container = document.getElementById("container");
+        var ball = document.getElementById("ball");
+
+        var speedX = 5;
+        var speedY = 5;
+
+        function updateBallPosition() {
+            var rect = container.getBoundingClientRect();
+            var ballX = parseFloat(ball.style.left) || 0;
+            var ballY = parseFloat(ball.style.top) || 0;
+
+            ballX += speedX;
+            ballY += speedY;
+
+            if (ballX <= rect.left || ballX + ball.offsetWidth >= rect.right) {
+                speedX = -speedX;
+            }
+            if (ballY <= rect.top || ballY + ball.offsetHeight >= rect.bottom) {
+                speedY = -speedY;
+            }
+
+            ball.style.left = ballX + "px";
+            ball.style.top = ballY + "px";
+
+            requestAnimationFrame(updateBallPosition);
+        }
+
+        updateBallPosition();
+    });
+</script>
+</body>
+</html>
